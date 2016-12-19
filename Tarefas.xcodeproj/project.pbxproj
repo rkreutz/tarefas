@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		373454F61E08989900D3354A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373454F51E08989900D3354A /* AppDelegate.swift */; };
-		373454F81E08989900D3354A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373454F71E08989900D3354A /* ViewController.swift */; };
+		373454F81E08989900D3354A /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373454F71E08989900D3354A /* TasksViewController.swift */; };
 		373454FB1E08989900D3354A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 373454F91E08989900D3354A /* Main.storyboard */; };
 		373454FD1E08989900D3354A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373454FC1E08989900D3354A /* Assets.xcassets */; };
 		373455001E08989900D3354A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 373454FE1E08989900D3354A /* LaunchScreen.storyboard */; };
+		37FBA44E1E089FF500129A41 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FBA44D1E089FF500129A41 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		373454F21E08989800D3354A /* Tarefas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tarefas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		373454F51E08989900D3354A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		373454F71E08989900D3354A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		373454F71E08989900D3354A /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		373454FA1E08989900D3354A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		373454FC1E08989900D3354A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		373454FF1E08989900D3354A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		373455011E08989900D3354A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37FBA44D1E089FF500129A41 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37FBA44E1E089FF500129A41 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +41,7 @@
 		373454E91E08989800D3354A = {
 			isa = PBXGroup;
 			children = (
+				37FBA44C1E089FD600129A41 /* Frameworks */,
 				373454F41E08989800D3354A /* Tarefas */,
 				373454F31E08989800D3354A /* Products */,
 			);
@@ -54,14 +58,54 @@
 		373454F41E08989800D3354A /* Tarefas */ = {
 			isa = PBXGroup;
 			children = (
-				373454F51E08989900D3354A /* AppDelegate.swift */,
-				373454F71E08989900D3354A /* ViewController.swift */,
-				373454F91E08989900D3354A /* Main.storyboard */,
-				373454FC1E08989900D3354A /* Assets.xcassets */,
-				373454FE1E08989900D3354A /* LaunchScreen.storyboard */,
-				373455011E08989900D3354A /* Info.plist */,
+				373455081E0898E300D3354A /* Model */,
+				373455091E0898EE00D3354A /* Controller */,
+				373455071E0898D700D3354A /* Interface */,
+				3734550A1E0898FA00D3354A /* Supporting Files */,
 			);
 			path = Tarefas;
+			sourceTree = "<group>";
+		};
+		373455071E0898D700D3354A /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				373454F91E08989900D3354A /* Main.storyboard */,
+				373454FE1E08989900D3354A /* LaunchScreen.storyboard */,
+			);
+			name = Interface;
+			sourceTree = "<group>";
+		};
+		373455081E0898E300D3354A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				373454F51E08989900D3354A /* AppDelegate.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		373455091E0898EE00D3354A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				373454F71E08989900D3354A /* TasksViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3734550A1E0898FA00D3354A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				373454FC1E08989900D3354A /* Assets.xcassets */,
+				373455011E08989900D3354A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		37FBA44C1E089FD600129A41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37FBA44D1E089FF500129A41 /* Alamofire.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				373454F81E08989900D3354A /* ViewController.swift in Sources */,
+				373454F81E08989900D3354A /* TasksViewController.swift in Sources */,
 				373454F61E08989900D3354A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,6 +306,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 49K39S52K6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Tarefas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rkreutz.Tarefas;
@@ -275,6 +323,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 49K39S52K6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Tarefas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rkreutz.Tarefas;
@@ -302,6 +354,7 @@
 				373455061E08989900D3354A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
