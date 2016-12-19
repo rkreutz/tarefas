@@ -13,6 +13,9 @@
 		373454FD1E08989900D3354A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373454FC1E08989900D3354A /* Assets.xcassets */; };
 		373455001E08989900D3354A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 373454FE1E08989900D3354A /* LaunchScreen.storyboard */; };
 		37FBA44E1E089FF500129A41 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FBA44D1E089FF500129A41 /* Alamofire.framework */; };
+		37FBA4501E08A22800129A41 /* TasksViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FBA44F1E08A22800129A41 /* TasksViewController+UITableViewDelegate.swift */; };
+		37FBA4521E08A2BD00129A41 /* TasksViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FBA4511E08A2BD00129A41 /* TasksViewController+UITableViewDataSource.swift */; };
+		37FBA4551E08A40500129A41 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FBA4541E08A40500129A41 /* TaskTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		373454FF1E08989900D3354A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		373455011E08989900D3354A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37FBA44D1E089FF500129A41 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		37FBA44F1E08A22800129A41 /* TasksViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TasksViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
+		37FBA4511E08A2BD00129A41 /* TasksViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TasksViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		37FBA4541E08A40500129A41 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,7 @@
 			children = (
 				373455081E0898E300D3354A /* Model */,
 				373455091E0898EE00D3354A /* Controller */,
+				37FBA4561E08A52700129A41 /* TableViewCell */,
 				373455071E0898D700D3354A /* Interface */,
 				3734550A1E0898FA00D3354A /* Supporting Files */,
 			);
@@ -86,7 +93,7 @@
 		373455091E0898EE00D3354A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				373454F71E08989900D3354A /* TasksViewController.swift */,
+				37FBA4531E08A3AF00129A41 /* TasksViewController */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -108,6 +115,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		37FBA4531E08A3AF00129A41 /* TasksViewController */ = {
+			isa = PBXGroup;
+			children = (
+				373454F71E08989900D3354A /* TasksViewController.swift */,
+				37FBA44F1E08A22800129A41 /* TasksViewController+UITableViewDelegate.swift */,
+				37FBA4511E08A2BD00129A41 /* TasksViewController+UITableViewDataSource.swift */,
+			);
+			name = TasksViewController;
+			sourceTree = "<group>";
+		};
+		37FBA4561E08A52700129A41 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				37FBA4541E08A40500129A41 /* TaskTableViewCell.swift */,
+			);
+			name = TableViewCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,6 +143,7 @@
 				373454EE1E08989800D3354A /* Sources */,
 				373454EF1E08989800D3354A /* Frameworks */,
 				373454F01E08989800D3354A /* Resources */,
+				37FBA4571E08A72300129A41 /* Carthage Libraries */,
 			);
 			buildRules = (
 			);
@@ -176,6 +202,24 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		37FBA4571E08A72300129A41 /* Carthage Libraries */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			name = "Carthage Libraries";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		373454EE1E08989800D3354A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -183,6 +227,9 @@
 			files = (
 				373454F81E08989900D3354A /* TasksViewController.swift in Sources */,
 				373454F61E08989900D3354A /* AppDelegate.swift in Sources */,
+				37FBA4551E08A40500129A41 /* TaskTableViewCell.swift in Sources */,
+				37FBA4521E08A2BD00129A41 /* TasksViewController+UITableViewDataSource.swift in Sources */,
+				37FBA4501E08A22800129A41 /* TasksViewController+UITableViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
