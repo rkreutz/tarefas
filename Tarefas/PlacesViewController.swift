@@ -62,37 +62,20 @@ class PlacesViewController: UIViewController {
     // MARK: - Actions
     /********************************/
     func updatePlaces() {
-        let url = ProjectConfiguration.serverHost.stringByAppendingPathComponent(pathComponent: "tarefa")
-        print("URL de serviço RESTful: \(url)")
-        
-        Alamofire.request(url).responseJSON { response in
-            var error: String = ""
-            
-            print("Resposta do serviço:")
-            debugPrint(response)
-            
-            // Checks for any error and the data that was fetched
-            switch response.result {
-                case .failure(let err):
-                    error = err.localizedDescription
-                case .success(let result):
-                    guard let result = result as? [String: Any], let list = result["lista"] as? [String] else {
-                        error = "Alguma coisa deu errado ao tentar carregar lista de tarefas."
-                        break
-                    }
-                    self.places = list
-            }
-            
-            // After the webservice is finished we can update the UI
+        RequestManager.updatePlaces { (list: [String]?, errorMsg: String?) in
+            // Update UI
             DispatchQueue.main.async {
                 self.refreshControl.endRefreshing()
                 self.tableView.reloadSections(IndexSet(integer: 0), with: .automatic)
+            }
+            
+            // If there were an error we'll present it to the user
+            if let errorMsg = errorMsg {
+                let alert = UIAlertController(title: "Erro", message: errorMsg, preferredStyle: .alert)
+                let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(ok)
                 
-                // If there were an error we'll present it to the user
-                if !error.isEmpty {
-                    let alert = UIAlertController(title: "Erro", message: error, preferredStyle: .alert)
-                    let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
-                    alert.addAction(ok)
+                DispatchQueue.main.async {
                     self.present(alert, animated: true, completion: nil)
                 }
             }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		372F771C1E09DB3900BD650D /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372F771B1E09DB3900BD650D /* RequestManager.swift */; };
 		373454F61E08989900D3354A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373454F51E08989900D3354A /* AppDelegate.swift */; };
 		373454F81E08989900D3354A /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373454F71E08989900D3354A /* PlacesViewController.swift */; };
 		373454FB1E08989900D3354A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 373454F91E08989900D3354A /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		372F771B1E09DB3900BD650D /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		373454F21E08989800D3354A /* Tarefas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tarefas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		373454F51E08989900D3354A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		373454F71E08989900D3354A /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				37FBA4541E08A40500129A41 /* PlaceTableViewCell.swift */,
 				37FBA4631E08CA8100129A41 /* Place.swift */,
 				37FBA4651E08CDDF00129A41 /* Comment.swift */,
+				372F771B1E09DB3900BD650D /* RequestManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				37FBA4551E08A40500129A41 /* PlaceTableViewCell.swift in Sources */,
 				37FBA4661E08CDDF00129A41 /* Comment.swift in Sources */,
 				37FBA4521E08A2BD00129A41 /* PlacesViewController+UITableViewDataSource.swift in Sources */,
+				372F771C1E09DB3900BD650D /* RequestManager.swift in Sources */,
 				37FBA4501E08A22800129A41 /* PlacesViewController+UITableViewDelegate.swift in Sources */,
 				37FBA4641E08CA8100129A41 /* Place.swift in Sources */,
 				37FBA4601E08C0C900129A41 /* DetailViewController.swift in Sources */,
