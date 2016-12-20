@@ -8,16 +8,17 @@
 
 import UIKit
 
-class TaskTableViewCell: UITableViewCell {
+class PlaceTableViewCell: UITableViewCell {
     /********************************/
     // MARK: - Static variables
     /********************************/
-    static let cellIdentifier = "taskCell"
+    static let cellIdentifier = "placeCell"
     
     /********************************/
     // MARK: - Outlets
     /********************************/
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     /********************************/
     // MARK: - UITableViewCell functions

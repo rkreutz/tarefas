@@ -8,32 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		373454F61E08989900D3354A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373454F51E08989900D3354A /* AppDelegate.swift */; };
-		373454F81E08989900D3354A /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373454F71E08989900D3354A /* TasksViewController.swift */; };
+		373454F81E08989900D3354A /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373454F71E08989900D3354A /* PlacesViewController.swift */; };
 		373454FB1E08989900D3354A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 373454F91E08989900D3354A /* Main.storyboard */; };
 		373454FD1E08989900D3354A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373454FC1E08989900D3354A /* Assets.xcassets */; };
 		373455001E08989900D3354A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 373454FE1E08989900D3354A /* LaunchScreen.storyboard */; };
 		37FBA44E1E089FF500129A41 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FBA44D1E089FF500129A41 /* Alamofire.framework */; };
-		37FBA4501E08A22800129A41 /* TasksViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FBA44F1E08A22800129A41 /* TasksViewController+UITableViewDelegate.swift */; };
-		37FBA4521E08A2BD00129A41 /* TasksViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FBA4511E08A2BD00129A41 /* TasksViewController+UITableViewDataSource.swift */; };
-		37FBA4551E08A40500129A41 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FBA4541E08A40500129A41 /* TaskTableViewCell.swift */; };
+		37FBA4501E08A22800129A41 /* PlacesViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FBA44F1E08A22800129A41 /* PlacesViewController+UITableViewDelegate.swift */; };
+		37FBA4521E08A2BD00129A41 /* PlacesViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FBA4511E08A2BD00129A41 /* PlacesViewController+UITableViewDataSource.swift */; };
+		37FBA4551E08A40500129A41 /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FBA4541E08A40500129A41 /* PlaceTableViewCell.swift */; };
 		37FBA4591E08AC5400129A41 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FBA4581E08AC5400129A41 /* UIKitExtensions.swift */; };
 		37FBA45B1E08AD3A00129A41 /* ProjectConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FBA45A1E08AD3A00129A41 /* ProjectConfiguration.swift */; };
+		37FBA4601E08C0C900129A41 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FBA45F1E08C0C900129A41 /* DetailViewController.swift */; };
+		37FBA4641E08CA8100129A41 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FBA4631E08CA8100129A41 /* Place.swift */; };
+		37FBA4661E08CDDF00129A41 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FBA4651E08CDDF00129A41 /* Comment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		373454F21E08989800D3354A /* Tarefas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tarefas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		373454F51E08989900D3354A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		373454F71E08989900D3354A /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		373454F71E08989900D3354A /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
 		373454FA1E08989900D3354A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		373454FC1E08989900D3354A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		373454FF1E08989900D3354A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		373455011E08989900D3354A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37FBA44D1E089FF500129A41 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		37FBA44F1E08A22800129A41 /* TasksViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TasksViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
-		37FBA4511E08A2BD00129A41 /* TasksViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TasksViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
-		37FBA4541E08A40500129A41 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		37FBA44F1E08A22800129A41 /* PlacesViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlacesViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
+		37FBA4511E08A2BD00129A41 /* PlacesViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlacesViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		37FBA4541E08A40500129A41 /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
 		37FBA4581E08AC5400129A41 /* UIKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
 		37FBA45A1E08AD3A00129A41 /* ProjectConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectConfiguration.swift; sourceTree = "<group>"; };
+		37FBA45F1E08C0C900129A41 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		37FBA4631E08CA8100129A41 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		37FBA4651E08CDDF00129A41 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +97,9 @@
 				373454F51E08989900D3354A /* AppDelegate.swift */,
 				37FBA4581E08AC5400129A41 /* UIKitExtensions.swift */,
 				37FBA45A1E08AD3A00129A41 /* ProjectConfiguration.swift */,
-				37FBA4561E08A52700129A41 /* TableViewCell */,
+				37FBA4541E08A40500129A41 /* PlaceTableViewCell.swift */,
+				37FBA4631E08CA8100129A41 /* Place.swift */,
+				37FBA4651E08CDDF00129A41 /* Comment.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -100,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				37FBA4531E08A3AF00129A41 /* TasksViewController */,
+				37FBA45E1E08C0AE00129A41 /* DetailViewController */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -124,19 +133,19 @@
 		37FBA4531E08A3AF00129A41 /* TasksViewController */ = {
 			isa = PBXGroup;
 			children = (
-				373454F71E08989900D3354A /* TasksViewController.swift */,
-				37FBA44F1E08A22800129A41 /* TasksViewController+UITableViewDelegate.swift */,
-				37FBA4511E08A2BD00129A41 /* TasksViewController+UITableViewDataSource.swift */,
+				373454F71E08989900D3354A /* PlacesViewController.swift */,
+				37FBA44F1E08A22800129A41 /* PlacesViewController+UITableViewDelegate.swift */,
+				37FBA4511E08A2BD00129A41 /* PlacesViewController+UITableViewDataSource.swift */,
 			);
 			name = TasksViewController;
 			sourceTree = "<group>";
 		};
-		37FBA4561E08A52700129A41 /* TableViewCell */ = {
+		37FBA45E1E08C0AE00129A41 /* DetailViewController */ = {
 			isa = PBXGroup;
 			children = (
-				37FBA4541E08A40500129A41 /* TaskTableViewCell.swift */,
+				37FBA45F1E08C0C900129A41 /* DetailViewController.swift */,
 			);
-			name = TableViewCell;
+			name = DetailViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,12 +241,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				37FBA45B1E08AD3A00129A41 /* ProjectConfiguration.swift in Sources */,
-				373454F81E08989900D3354A /* TasksViewController.swift in Sources */,
+				373454F81E08989900D3354A /* PlacesViewController.swift in Sources */,
 				373454F61E08989900D3354A /* AppDelegate.swift in Sources */,
 				37FBA4591E08AC5400129A41 /* UIKitExtensions.swift in Sources */,
-				37FBA4551E08A40500129A41 /* TaskTableViewCell.swift in Sources */,
-				37FBA4521E08A2BD00129A41 /* TasksViewController+UITableViewDataSource.swift in Sources */,
-				37FBA4501E08A22800129A41 /* TasksViewController+UITableViewDelegate.swift in Sources */,
+				37FBA4551E08A40500129A41 /* PlaceTableViewCell.swift in Sources */,
+				37FBA4661E08CDDF00129A41 /* Comment.swift in Sources */,
+				37FBA4521E08A2BD00129A41 /* PlacesViewController+UITableViewDataSource.swift in Sources */,
+				37FBA4501E08A22800129A41 /* PlacesViewController+UITableViewDelegate.swift in Sources */,
+				37FBA4641E08CA8100129A41 /* Place.swift in Sources */,
+				37FBA4601E08C0C900129A41 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

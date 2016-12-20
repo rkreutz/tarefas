@@ -8,6 +8,9 @@
 
 import UIKit
 
+/********************************/
+// MARK: - String extensions
+/********************************/
 extension String {
     
     // Will append path component to a string. It will keep the format of an http url string

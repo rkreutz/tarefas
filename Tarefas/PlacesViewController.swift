@@ -9,7 +9,12 @@
 import UIKit
 import Alamofire
 
-class TasksViewController: UIViewController {
+class PlacesViewController: UIViewController {
+    /********************************/
+    // MARK: - Static variables
+    /********************************/
+    static let detailSegueIdentifier = "showDetail"
+    
     /********************************/
     // MARK: - Outlets
     /********************************/
@@ -20,10 +25,10 @@ class TasksViewController: UIViewController {
     /********************************/
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: #selector(TasksViewController.updateTasks), for: UIControlEvents.valueChanged)
+        refreshControl.addTarget(self, action: #selector(PlacesViewController.updatePlaces), for: UIControlEvents.valueChanged)
         return refreshControl
     }()
-    var tasks: [String] = []
+    var places: [String] = []
     
     /********************************/
     // MARK: - UIViewController functions
@@ -41,21 +46,32 @@ class TasksViewController: UIViewController {
         self.tableView.addSubview(self.refreshControl)
         
         // Other configuration
-        self.title = "Tarefas"
+        self.title = "Tarefa"
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if self.places.count == 0 {
+            // First we dislocate the table view so the refresh control is visible, then we start updating
+            self.tableView.setContentOffset(CGPoint(x: 0, y: -self.refreshControl.frame.height), animated: true)
+            self.refreshControl.beginRefreshing()
+            self.updatePlaces()
+        }
     }
     
     /********************************/
     // MARK: - Actions
     /********************************/
-    func updateTasks() {
+    func updatePlaces() {
         let url = ProjectConfiguration.serverHost.stringByAppendingPathComponent(pathComponent: "tarefa")
         print("URL de serviço RESTful: \(url)")
         
         Alamofire.request(url).responseJSON { response in
+            var error: String = ""
+            
             print("Resposta do serviço:")
             debugPrint(response)
             
-            var error: String = ""
+            // Checks for any error and the data that was fetched
             switch response.result {
                 case .failure(let err):
                     error = err.localizedDescription
@@ -64,12 +80,15 @@ class TasksViewController: UIViewController {
                         error = "Alguma coisa deu errado ao tentar carregar lista de tarefas."
                         break
                     }
-                    self.tasks = list
+                    self.places = list
             }
             
+            // After the webservice is finished we can update the UI
             DispatchQueue.main.async {
                 self.refreshControl.endRefreshing()
                 self.tableView.reloadSections(IndexSet(integer: 0), with: .automatic)
+                
+                // If there were an error we'll present it to the user
                 if !error.isEmpty {
                     let alert = UIAlertController(title: "Erro", message: error, preferredStyle: .alert)
                     let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -79,10 +98,6 @@ class TasksViewController: UIViewController {
             }
         }
     }
-    
-    /********************************/
-    // MARK: - Requests completion handlers
-    /********************************/
     
 }
 

@@ -1,5 +1,5 @@
 //
-//  TasksViewController+UITableViewDataSource.swift
+//  PlacesViewController+UITableViewDataSource.swift
 //  Tarefas
 //
 //  Created by Rodrigo Kreutz on 19/12/16.
@@ -8,16 +8,18 @@
 
 import UIKit
 
-extension TasksViewController: UITableViewDataSource {
+extension PlacesViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: TaskTableViewCell.cellIdentifier, for: indexPath) as! TaskTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: PlaceTableViewCell.cellIdentifier, for: indexPath) as! PlaceTableViewCell
         
-        cell.titleLabel.text = self.tasks[indexPath.row]
+        cell.titleLabel.text = self.places[indexPath.row]
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.tasks.count
+        return self.places.count
     }
+    
 }
