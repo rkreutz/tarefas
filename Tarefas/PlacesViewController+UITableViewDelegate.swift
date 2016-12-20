@@ -20,29 +20,7 @@ extension PlacesViewController: UITableViewDelegate {
             // Indicates the cell information is beeing loaded
             cell.activityIndicator.startAnimating()
             
-            // URL will be the server endpoint concatenated with the path 'tarefa' concatenated with the path of the place itself
-            let url = ProjectConfiguration.serverHost.stringByAppendingPathComponent(pathComponent: "tarefa").stringByAppendingPathComponent(pathComponent: self.places[indexPath.row])
-            print("URL de serviço RESTful: \(url)")
-            
-            Alamofire.request(url).responseJSON(completionHandler: { response in
-                var error: String = ""
-                var place: Place!
-                
-                print("Resposta do serviço:")
-                debugPrint(response)
-                
-                // Checks for any error and the data that was fetched
-                switch response.result {
-                case .failure(let err):
-                    error = err.localizedDescription
-                case .success(let result):
-                    guard let result = result as? [String: Any] else {
-                        error = "Alguma coisa deu errado ao tentar carregar detalhes da tarefa."
-                        break
-                    }
-                    place = Place(dict: result)
-                }
-                
+            RequestManager.fetchPlaceDetail(place: self.places[indexPath.row]) { (place: Place?, errorMsg: String?) in
                 DispatchQueue.main.async {
                     // We enable all interactions
                     tableView.allowsSelection = true
@@ -50,19 +28,24 @@ extension PlacesViewController: UITableViewDelegate {
                     
                     // And stop the indicator for the cell detail
                     cell.activityIndicator.stopAnimating()
+                }
+                
+                // If there were no errors we shall proceed to the detail view
+                // Otherwise we present the error to the user
+                if let errorMsg = errorMsg {
+                    let alert = UIAlertController(title: "Erro", message: errorMsg, preferredStyle: .alert)
+                    let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    alert.addAction(ok)
                     
-                    // If there were no errors we shall proceed to the detail view
-                    // Otherwise we present the error to the user
-                    if error.isEmpty {
-                        print(place)
-                    } else {
-                        let alert = UIAlertController(title: "Erro", message: error, preferredStyle: .alert)
-                        let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
-                        alert.addAction(ok)
+                    DispatchQueue.main.async {
                         self.present(alert, animated: true, completion: nil)
                     }
+                } else {
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: PlacesViewController.detailSegueIdentifier, sender: place)
+                    }
                 }
-            })
+            }
         }
     }
     
