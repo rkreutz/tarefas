@@ -22,7 +22,7 @@ class DetailViewController: UIViewController {
     // MARK: - Instance variables
     /********************************/
     var place: Place!
-    var headerSize: CGFloat = 100
+    var headerSize: CGFloat = 300
     
     /********************************/
     // MARK: - UIViewController functions

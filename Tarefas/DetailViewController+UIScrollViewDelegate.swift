@@ -17,13 +17,13 @@ extension DetailViewController: UIScrollViewDelegate {
         if yPos > 0 {
             if self.headerSize > 40 {
                 self.tableView.beginUpdates()
-                self.headerSize = 100 - yPos >= 40 ? 100 - yPos : 40
+                self.headerSize = 300 - yPos >= 40 ? 300 - yPos : 40
                 self.tableView.endUpdates()
             }
         } else {
-            if self.headerSize < 100 {
+            if self.headerSize < 300 {
                 self.tableView.beginUpdates()
-                self.headerSize = self.headerSize - yPos <= 100 ? self.headerSize - yPos : 100
+                self.headerSize = self.headerSize - yPos <= 300 ? self.headerSize - yPos : 300
                 self.tableView.endUpdates()
             }
         }

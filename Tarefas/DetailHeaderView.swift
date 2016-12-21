@@ -18,9 +18,7 @@ class DetailHeaderView: UITableViewHeaderFooterView {
     // MARK: - Outlets
     /********************************/
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var imageIndicator: UIActivityIndicatorView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var logoView: UIImageView!
-    @IBOutlet weak var logoIndicator: UIActivityIndicatorView!
 
 }
