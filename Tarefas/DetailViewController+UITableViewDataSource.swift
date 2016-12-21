@@ -11,9 +11,7 @@ import UIKit
 extension DetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        
-        cell.textLabel?.text = "Cell \(indexPath.row)"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "actionCell", for: indexPath)
         
         return cell
     }

@@ -10,6 +10,7 @@ import UIKit
 
 extension DetailViewController: UIScrollViewDelegate {
     
+    // Here we do all the magic for the header animation. Autolayout constraints also are needed
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let yPos = scrollView.contentOffset.y
         let maxHeight = ProjectConfiguration.detailHeaderMaxHeight

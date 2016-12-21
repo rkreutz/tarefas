@@ -22,7 +22,7 @@ class DetailViewController: UIViewController {
     // MARK: - Instance variables
     /********************************/
     var place: Place!
-    var headerSize: CGFloat = 300
+    var headerSize: CGFloat = ProjectConfiguration.detailHeaderMaxHeight
     
     /********************************/
     // MARK: - UIViewController functions
@@ -39,6 +39,8 @@ class DetailViewController: UIViewController {
         self.tableView.dataSource = self
         let headerViewNib = UINib(nibName: "DetailHeaderView", bundle: nil)
         tableView.register(headerViewNib, forHeaderFooterViewReuseIdentifier: DetailHeaderView.headerIdentifier)
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 64
         
         // Other configuration
         self.title = "\(self.place.city) - \(self.place.district)"
