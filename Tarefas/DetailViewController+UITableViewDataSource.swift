@@ -14,8 +14,10 @@ extension DetailViewController: UITableViewDataSource {
         var cell: UITableViewCell!
         if indexPath.row == 0 {
             cell = tableView.dequeueReusableCell(withIdentifier: "actionCell", for: indexPath)
-        } else {
+        } else if indexPath.row == 1 {
             cell = tableView.dequeueReusableCell(withIdentifier: "descriptionCell", for: indexPath)
+        } else {
+            cell = tableView.dequeueReusableCell(withIdentifier: "commentCell", for: indexPath)
         }
         
         return cell

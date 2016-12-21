@@ -24,4 +24,8 @@ extension DetailViewController: UITableViewDelegate {
         return self.headerSize
     }
     
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        tableView.bounces = tableView.contentSize.height > tableView.frame.size.height
+    }
+    
 }
