@@ -21,7 +21,8 @@ class DetailViewController: UIViewController {
     /********************************/
     // MARK: - Instance variables
     /********************************/
-    var task: String?
+    var place: Place!
+    var headerSize: CGFloat = 100
     
     /********************************/
     // MARK: - UIViewController functions
@@ -34,10 +35,12 @@ class DetailViewController: UIViewController {
         self.automaticallyAdjustsScrollViewInsets = false
         
         // Table view configuration
-//        self.tableView.delegate = self
-//        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        let headerViewNib = UINib(nibName: "DetailHeaderView", bundle: nil)
+        tableView.register(headerViewNib, forHeaderFooterViewReuseIdentifier: DetailHeaderView.headerIdentifier)
         
         // Other configuration
-//        self.title = "Tarefas"
+        self.title = "\(self.place.city) - \(self.place.district)"
     }
 }

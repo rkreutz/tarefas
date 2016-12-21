@@ -63,6 +63,10 @@ class PlacesViewController: UIViewController {
     /********************************/
     func updatePlaces() {
         RequestManager.updatePlaces { (list: [String]?, errorMsg: String?) in
+            if let list = list {
+                self.places = list
+            }
+            
             // Update UI
             DispatchQueue.main.async {
                 self.refreshControl.endRefreshing()
@@ -79,6 +83,19 @@ class PlacesViewController: UIViewController {
                     self.present(alert, animated: true, completion: nil)
                 }
             }
+        }
+    }
+    
+    /********************************/
+    // MARK: - Navigation
+    /********************************/
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == PlacesViewController.detailSegueIdentifier {
+            guard let place = sender as? Place, let dstView = segue.destination as? DetailViewController else {
+                return
+            }
+            
+            dstView.place = place
         }
     }
     
