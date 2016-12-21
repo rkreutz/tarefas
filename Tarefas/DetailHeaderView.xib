@@ -20,22 +20,22 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WFv-pm-cqX">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="440"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="420"/>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGN-MJ-ok6">
-                            <rect key="frame" x="16" y="440" width="51.5" height="40"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tGN-MJ-ok6">
+                            <rect key="frame" x="16" y="420" width="68" height="60"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="tB8-7L-7os"/>
+                                <constraint firstAttribute="height" constant="60" id="tB8-7L-7os"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
                             <color key="textColor" red="0.85012620689999996" green="0.50828433039999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="60" placeholderIntrinsicHeight="60" translatesAutoresizingMaskIntoConstraints="NO" id="ltA-E3-yVC" customClass="RoundedImageView" customModule="Tarefas" customModuleProvider="target">
-                            <rect key="frame" x="244" y="412" width="60" height="60"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="ltA-E3-yVC" customClass="RoundedImageView" customModule="Tarefas" customModuleProvider="target">
+                            <rect key="frame" x="204" y="372" width="100" height="100"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="M8Y-Md-1oE"/>
+                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="M8Y-Md-1oE"/>
                                 <constraint firstAttribute="width" secondItem="ltA-E3-yVC" secondAttribute="height" multiplier="1:1" id="ObQ-ET-b8N"/>
                             </constraints>
                         </imageView>
@@ -51,6 +51,7 @@
                         <constraint firstAttribute="bottom" secondItem="tGN-MJ-ok6" secondAttribute="bottom" id="bHN-bq-PFt"/>
                         <constraint firstItem="tGN-MJ-ok6" firstAttribute="leading" secondItem="1T8-yW-3VI" secondAttribute="leading" constant="16" id="bRx-xI-BcD"/>
                         <constraint firstAttribute="trailing" secondItem="ltA-E3-yVC" secondAttribute="trailing" constant="16" id="f7g-H1-21b"/>
+                        <constraint firstItem="ltA-E3-yVC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tGN-MJ-ok6" secondAttribute="trailing" constant="16" id="kJG-5q-uhc"/>
                         <constraint firstItem="tGN-MJ-ok6" firstAttribute="bottom" secondItem="ltA-E3-yVC" secondAttribute="bottom" constant="8" id="vq3-Xm-bQH"/>
                     </constraints>
                 </view>

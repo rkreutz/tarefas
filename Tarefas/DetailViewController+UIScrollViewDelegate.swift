@@ -12,18 +12,19 @@ extension DetailViewController: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let yPos = scrollView.contentOffset.y
-        print(yPos)
+        let maxHeight = ProjectConfiguration.detailHeaderMaxHeight
+        let minHeight = (self.tableView.headerView(forSection: 0) as! DetailHeaderView).titleLabel.frame.height
         
-        if yPos > 0 {
-            if self.headerSize > 40 {
+        if yPos < 0 {
+            if self.headerSize < maxHeight {
                 self.tableView.beginUpdates()
-                self.headerSize = 300 - yPos >= 40 ? 300 - yPos : 40
+                self.headerSize = self.headerSize - yPos <= maxHeight ? self.headerSize - yPos : maxHeight
                 self.tableView.endUpdates()
             }
-        } else {
-            if self.headerSize < 300 {
+        } else if yPos > 0 {
+            if self.headerSize > minHeight {
                 self.tableView.beginUpdates()
-                self.headerSize = self.headerSize - yPos <= 300 ? self.headerSize - yPos : 300
+                self.headerSize = maxHeight - yPos >= minHeight ? maxHeight - yPos : minHeight
                 self.tableView.endUpdates()
             }
         }
