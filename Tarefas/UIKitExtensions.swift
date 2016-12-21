@@ -74,6 +74,4 @@ extension UIImageView {
         }
     }
     
-    // Will make the image view adjust its corner radius acording to its size
-    
 }

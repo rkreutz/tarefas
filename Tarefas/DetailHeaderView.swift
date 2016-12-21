@@ -19,6 +19,6 @@ class DetailHeaderView: UITableViewHeaderFooterView {
     /********************************/
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var logoView: UIImageView!
+    @IBOutlet weak var logoView: RoundedImageView!
 
 }

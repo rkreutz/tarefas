@@ -18,6 +18,7 @@
 		373454FB1E08989900D3354A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 373454F91E08989900D3354A /* Main.storyboard */; };
 		373454FD1E08989900D3354A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373454FC1E08989900D3354A /* Assets.xcassets */; };
 		373455001E08989900D3354A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 373454FE1E08989900D3354A /* LaunchScreen.storyboard */; };
+		37947ACB1E0A21A100F8BB33 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37947ACA1E0A21A100F8BB33 /* RoundedImageView.swift */; };
 		37FBA44E1E089FF500129A41 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FBA44D1E089FF500129A41 /* Alamofire.framework */; };
 		37FBA4501E08A22800129A41 /* PlacesViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FBA44F1E08A22800129A41 /* PlacesViewController+UITableViewDelegate.swift */; };
 		37FBA4521E08A2BD00129A41 /* PlacesViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FBA4511E08A2BD00129A41 /* PlacesViewController+UITableViewDataSource.swift */; };
@@ -43,6 +44,7 @@
 		373454FC1E08989900D3354A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		373454FF1E08989900D3354A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		373455011E08989900D3354A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37947ACA1E0A21A100F8BB33 /* RoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		37FBA44D1E089FF500129A41 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		37FBA44F1E08A22800129A41 /* PlacesViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlacesViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
 		37FBA4511E08A2BD00129A41 /* PlacesViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlacesViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				37FBA4541E08A40500129A41 /* PlaceTableViewCell.swift */,
 				37FBA45A1E08AD3A00129A41 /* ProjectConfiguration.swift */,
 				372F771B1E09DB3900BD650D /* RequestManager.swift */,
+				37947ACA1E0A21A100F8BB33 /* RoundedImageView.swift */,
 				37FBA4581E08AC5400129A41 /* UIKitExtensions.swift */,
 			);
 			name = Model;
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37947ACB1E0A21A100F8BB33 /* RoundedImageView.swift in Sources */,
 				37FBA45B1E08AD3A00129A41 /* ProjectConfiguration.swift in Sources */,
 				373454F81E08989900D3354A /* PlacesViewController.swift in Sources */,
 				373454F61E08989900D3354A /* AppDelegate.swift in Sources */,

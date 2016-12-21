@@ -31,7 +31,7 @@
                             <color key="textColor" red="0.85012620689999996" green="0.50828433039999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="60" placeholderIntrinsicHeight="60" translatesAutoresizingMaskIntoConstraints="NO" id="ltA-E3-yVC">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="60" placeholderIntrinsicHeight="60" translatesAutoresizingMaskIntoConstraints="NO" id="ltA-E3-yVC" customClass="RoundedImageView" customModule="Tarefas" customModuleProvider="target">
                             <rect key="frame" x="244" y="412" width="60" height="60"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -46,11 +46,11 @@
                         <constraint firstItem="tGN-MJ-ok6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ltA-E3-yVC" secondAttribute="top" constant="-8" id="6Sb-qM-gpO"/>
                         <constraint firstItem="tGN-MJ-ok6" firstAttribute="top" secondItem="WFv-pm-cqX" secondAttribute="bottom" id="G88-OR-JOB"/>
                         <constraint firstItem="ltA-E3-yVC" firstAttribute="top" relation="greaterThanOrEqual" secondItem="1T8-yW-3VI" secondAttribute="top" constant="8" id="Nwo-MH-HJI"/>
+                        <constraint firstAttribute="trailing" secondItem="WFv-pm-cqX" secondAttribute="trailing" id="Sxw-cp-aGZ"/>
                         <constraint firstItem="WFv-pm-cqX" firstAttribute="top" secondItem="1T8-yW-3VI" secondAttribute="top" id="ZKt-RL-MNs"/>
                         <constraint firstAttribute="bottom" secondItem="tGN-MJ-ok6" secondAttribute="bottom" id="bHN-bq-PFt"/>
                         <constraint firstItem="tGN-MJ-ok6" firstAttribute="leading" secondItem="1T8-yW-3VI" secondAttribute="leading" constant="16" id="bRx-xI-BcD"/>
                         <constraint firstAttribute="trailing" secondItem="ltA-E3-yVC" secondAttribute="trailing" constant="16" id="f7g-H1-21b"/>
-                        <constraint firstItem="WFv-pm-cqX" firstAttribute="centerX" secondItem="1T8-yW-3VI" secondAttribute="centerX" id="nBZ-RX-Xcs"/>
                         <constraint firstItem="tGN-MJ-ok6" firstAttribute="bottom" secondItem="ltA-E3-yVC" secondAttribute="bottom" constant="8" id="vq3-Xm-bQH"/>
                     </constraints>
                 </view>
@@ -64,7 +64,7 @@
             </constraints>
             <connections>
                 <outlet property="imageView" destination="WFv-pm-cqX" id="Ohl-4h-Pfz"/>
-                <outlet property="logoView" destination="ltA-E3-yVC" id="ppb-T2-0HU"/>
+                <outlet property="logoView" destination="ltA-E3-yVC" id="axo-0b-3ms"/>
                 <outlet property="titleLabel" destination="tGN-MJ-ok6" id="h4p-bL-R1N"/>
             </connections>
         </view>
