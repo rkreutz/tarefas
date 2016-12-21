@@ -11,13 +11,18 @@ import UIKit
 extension DetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "actionCell", for: indexPath)
+        var cell: UITableViewCell!
+        if indexPath.row == 0 {
+            cell = tableView.dequeueReusableCell(withIdentifier: "actionCell", for: indexPath)
+        } else {
+            cell = tableView.dequeueReusableCell(withIdentifier: "descriptionCell", for: indexPath)
+        }
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return 2
     }
     
 }
