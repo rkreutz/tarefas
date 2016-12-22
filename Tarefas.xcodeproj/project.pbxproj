@@ -157,8 +157,8 @@
 		37FBA44C1E089FD600129A41 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				37947ACC1E0A397F00F8BB33 /* MapKit.framework */,
 				37FBA44D1E089FF500129A41 /* Alamofire.framework */,
+				37947ACC1E0A397F00F8BB33 /* MapKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

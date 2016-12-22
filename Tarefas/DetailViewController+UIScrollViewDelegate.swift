@@ -10,7 +10,7 @@ import UIKit
 
 extension DetailViewController: UIScrollViewDelegate {
     
-    // Here we do all the magic for the header animation. Autolayout constraints also are needed
+    // Here we do all the magic for the header animation. Autolayout constraints are also needed
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offset = scrollView.contentOffset
         

@@ -85,10 +85,12 @@ class DetailViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.navigationItem.titleView = titleView
         }
+        // End of the configuration of the title. We update the title view after 0.5 seconds
+        // So the left button is already loaded on the view and the title stays centered
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        // Here we discovery the minimal height the header needs to fill the whole table view
+        // Here we determine the minimal height the header needs to fill the whole table view
         let labelHeight = (self.tableView.headerView(forSection: 0) as! DetailHeaderView).titleLabel.frame.height
         let actualContenHeight = self.tableView.contentSize.height - self.headerSize
         var missingSpace = self.tableView.frame.height - labelHeight - actualContenHeight

@@ -63,6 +63,7 @@ class PlacesViewController: UIViewController {
     /********************************/
     func updatePlaces() {
         RequestManager.updatePlaces { (list: [String]?, errorMsg: String?) in
+            // Update the data we have
             if let list = list {
                 self.places = list
             }
