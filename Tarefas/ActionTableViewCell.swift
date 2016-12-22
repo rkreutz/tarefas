@@ -8,6 +8,13 @@
 
 import UIKit
 
+protocol ActionTableViewCellDelegate {
+    func call()
+    func showServices()
+    func showAddress()
+    func showComments()
+}
+
 class ActionTableViewCell: UITableViewCell {
     /********************************/
     // MARK: - Static variables
@@ -15,7 +22,27 @@ class ActionTableViewCell: UITableViewCell {
     static let cellIdentifier = "actionCell"
     
     /********************************/
-    // MARK: - Outlets
+    // MARK: - Instance variables
     /********************************/
+    var delegate: ActionTableViewCellDelegate?
+    
+    /********************************/
+    // MARK: - Actions
+    /********************************/
+    @IBAction func pressedCall(_ sender: Any) {
+        self.delegate?.call()
+    }
+    
+    @IBAction func pressedServices(_ sender: Any) {
+        self.delegate?.showServices()
+    }
+    
+    @IBAction func pressedAddress(_ sender: Any) {
+        self.delegate?.showAddress()
+    }
+    
+    @IBAction func pressedComments(_ sender: Any) {
+        self.delegate?.showComments()
+    }
     
 }

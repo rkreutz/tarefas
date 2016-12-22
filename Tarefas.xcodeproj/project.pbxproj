@@ -23,6 +23,7 @@
 		373EB91C1E0A926F00D14A15 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373EB91B1E0A926F00D14A15 /* CommentTableViewCell.swift */; };
 		37947ACB1E0A21A100F8BB33 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37947ACA1E0A21A100F8BB33 /* RoundedImageView.swift */; };
 		37947ACD1E0A398000F8BB33 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37947ACC1E0A397F00F8BB33 /* MapKit.framework */; };
+		379CDB951E0B6AC000408B3B /* DetailViewController+ActionTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379CDB941E0B6AC000408B3B /* DetailViewController+ActionTableViewCellDelegate.swift */; };
 		37FBA44E1E089FF500129A41 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FBA44D1E089FF500129A41 /* Alamofire.framework */; };
 		37FBA4501E08A22800129A41 /* PlacesViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FBA44F1E08A22800129A41 /* PlacesViewController+UITableViewDelegate.swift */; };
 		37FBA4521E08A2BD00129A41 /* PlacesViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FBA4511E08A2BD00129A41 /* PlacesViewController+UITableViewDataSource.swift */; };
@@ -53,6 +54,7 @@
 		373EB91B1E0A926F00D14A15 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		37947ACA1E0A21A100F8BB33 /* RoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		37947ACC1E0A397F00F8BB33 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		379CDB941E0B6AC000408B3B /* DetailViewController+ActionTableViewCellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DetailViewController+ActionTableViewCellDelegate.swift"; sourceTree = "<group>"; };
 		37FBA44D1E089FF500129A41 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		37FBA44F1E08A22800129A41 /* PlacesViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlacesViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
 		37FBA4511E08A2BD00129A41 /* PlacesViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlacesViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				372F771D1E09EAD800BD650D /* DetailViewController+UITableViewDelegate.swift */,
 				372F771F1E09EAF000BD650D /* DetailViewController+UITableViewDataSource.swift */,
 				372F77211E09EB9D00BD650D /* DetailViewController+UIScrollViewDelegate.swift */,
+				379CDB941E0B6AC000408B3B /* DetailViewController+ActionTableViewCellDelegate.swift */,
 			);
 			name = DetailViewController;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				373454F61E08989900D3354A /* AppDelegate.swift in Sources */,
 				37FBA4591E08AC5400129A41 /* UIKitExtensions.swift in Sources */,
 				37FBA4551E08A40500129A41 /* PlaceTableViewCell.swift in Sources */,
+				379CDB951E0B6AC000408B3B /* DetailViewController+ActionTableViewCellDelegate.swift in Sources */,
 				37FBA4661E08CDDF00129A41 /* Comment.swift in Sources */,
 				372F77221E09EB9D00BD650D /* DetailViewController+UIScrollViewDelegate.swift in Sources */,
 				372F771E1E09EAD800BD650D /* DetailViewController+UITableViewDelegate.swift in Sources */,

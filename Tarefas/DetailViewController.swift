@@ -12,6 +12,7 @@ class DetailViewController: UIViewController {
     /********************************/
     // MARK: - Static variables
     /********************************/
+    static let servicesSegueIdentifier = "showServices"
     
     /********************************/
     // MARK: - Outlets

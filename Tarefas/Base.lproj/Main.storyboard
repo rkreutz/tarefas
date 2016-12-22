@@ -115,6 +115,9 @@
                                                             <state key="normal" title="Ligar" image="call">
                                                                 <color key="titleColor" red="0.85012620689999996" green="0.50828433039999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="pressedCall:" destination="3p2-1E-1gA" eventType="touchUpInside" id="OUE-5B-fIA"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mg5-nN-1N0">
                                                             <rect key="frame" x="64" y="0.0" width="64" height="64"/>
@@ -124,6 +127,9 @@
                                                             <state key="normal" title="Serviços" image="services">
                                                                 <color key="titleColor" red="0.85012620689999996" green="0.50828433039999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="pressedServices:" destination="3p2-1E-1gA" eventType="touchUpInside" id="xec-1a-nrp"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jan-TV-s6M">
                                                             <rect key="frame" x="128" y="0.0" width="64" height="64"/>
@@ -133,6 +139,9 @@
                                                             <state key="normal" title="Endereço" image="location">
                                                                 <color key="titleColor" red="0.85012620689999996" green="0.50828433039999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="pressedAddress:" destination="3p2-1E-1gA" eventType="touchUpInside" id="CXv-qO-GHh"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkQ-dh-Djy">
                                                             <rect key="frame" x="192" y="0.0" width="64" height="64"/>
@@ -142,6 +151,9 @@
                                                             <state key="normal" title="Comentários" image="comments">
                                                                 <color key="titleColor" red="0.85012620689999996" green="0.50828433039999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="pressedComments:" destination="3p2-1E-1gA" eventType="touchUpInside" id="1vM-ZR-gcR"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9j-Gj-Swx">
                                                             <rect key="frame" x="256" y="0.0" width="64" height="64"/>
@@ -325,11 +337,42 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="PH2-le-74e" id="QCo-p7-Pbo"/>
+                        <segue destination="itP-00-nhV" kind="show" identifier="showServices" id="YXH-Ab-Qgn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6S-MC-VBy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1959.375" y="122.5"/>
+        </scene>
+        <!--Serviços-->
+        <scene sceneID="Rl4-VP-hW2">
+            <objects>
+                <viewController title="Serviços" id="itP-00-nhV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="l2T-xR-aq9"/>
+                        <viewControllerLayoutGuide type="bottom" id="84M-3Y-Pzi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uFv-Ep-GiE">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serviços" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6a-Ix-qAG">
+                                <rect key="frame" x="127" y="197.5" width="66" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.85012620689999996" green="0.50828433039999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f6a-Ix-qAG" firstAttribute="centerX" secondItem="uFv-Ep-GiE" secondAttribute="centerX" id="2Fm-d0-tdQ"/>
+                            <constraint firstItem="f6a-Ix-qAG" firstAttribute="centerY" secondItem="uFv-Ep-GiE" secondAttribute="centerY" id="ae4-HG-mNM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q1s-um-koi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2813" y="123"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2m9-tL-Ao3">

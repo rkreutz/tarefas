@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 extension DetailViewController: UITableViewDataSource {
     
@@ -17,12 +18,16 @@ extension DetailViewController: UITableViewDataSource {
         case 0:
             let tmpCell = tableView.dequeueReusableCell(withIdentifier: ActionTableViewCell.cellIdentifier, for: indexPath) as! ActionTableViewCell
             
+            tmpCell.delegate = self
+            
             cell = tmpCell
         case 1:
             let tmpCell = tableView.dequeueReusableCell(withIdentifier: DescriptionTableViewCell.cellIdentifier, for: indexPath) as! DescriptionTableViewCell
+            let camera = MKMapCamera( lookingAtCenter: self.place.location, fromEyeCoordinate: self.place.location, eyeAltitude: 1000)
             
             tmpCell.descriptionLabel.text = self.place.text
             tmpCell.addressLabel.text = self.place.address
+            tmpCell.mapView.setCamera(camera, animated: false)
             
             cell = tmpCell
         default:
