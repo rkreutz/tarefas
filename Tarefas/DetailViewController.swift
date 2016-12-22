@@ -83,6 +83,8 @@ class DetailViewController: UIViewController {
         titleView.addSubview(titleLabel)
         titleView.addSubview(imageView)
 
-        self.navigationItem.titleView = titleView
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.navigationItem.titleView = titleView
+        }
     }
 }
