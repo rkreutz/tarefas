@@ -43,9 +43,46 @@ class DetailViewController: UIViewController {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 64
         
-        // Other configuration
-        self.title = "\(self.place.city) - \(self.place.district)"
+        // Configuring the right button of the navigation bar
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: nil, action: nil)
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
         
-        print(self.place)
+        // Configuring the title of the navigation bar
+        guard let bar = self.navigationController?.navigationBar,
+            let rightButton = self.navigationItem.rightBarButtonItem else {
+                return
+        }
+        
+        let title = "\(self.place.city) - \(self.place.district)"
+        let maxTitleWidth = bar.frame.width - rightButton.width - 120 - 16
+        let imageSize = CGSize(width: 32, height: 32)
+        let margin = CGFloat(8)
+        
+        let titleLabel = UILabel()
+        titleLabel.textColor = UIColor.white
+        titleLabel.font = UIFont.systemFont(ofSize: 17)
+        titleLabel.backgroundColor = UIColor.clear
+        titleLabel.text = title
+        
+        let maxLabelWidth = titleLabel.intrinsicContentSize.width
+        let labelWidth = maxTitleWidth - imageSize.width - margin < maxLabelWidth ? maxTitleWidth - imageSize.width - margin : maxLabelWidth
+        
+        titleLabel.frame = CGRect(x: imageSize.width + 2*margin, y: 0, width: labelWidth, height: 40)
+        titleLabel.adjustsFontSizeToFitWidth = true
+        
+        let imageView = UIImageView(frame: CGRect(x: margin, y: 4, width: imageSize.width, height: imageSize.height))
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = UIImage(named: "location-white")
+        
+        let titleWidth = 3*margin + imageSize.width + labelWidth
+        let titleView = UIView(frame: CGRect(x: 0, y: 0, width: titleWidth, height: 40))
+        titleView.backgroundColor = UIColor.clear
+        titleView.addSubview(titleLabel)
+        titleView.addSubview(imageView)
+
+        self.navigationItem.titleView = titleView
     }
 }
