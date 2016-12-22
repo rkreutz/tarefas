@@ -32,6 +32,8 @@ extension UIImageView {
     // Will load an image from the URL specified. While it is loading an activity indicator
     // will be shown on the center of the image view.
     public func loadImage(fromUrl strUrl: String) {
+        self.image = nil
+        
         // Activity indicator to be shown
         let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
         activityIndicator.hidesWhenStopped = true
@@ -53,18 +55,16 @@ extension UIImageView {
         
         // Will load asynchronously the image
         DispatchQueue.global().async {
-            let image = URL(string: strUrl)
-                .flatMap { url -> Data? in
-                    return try? Data(contentsOf: url)
-                }.flatMap { data -> UIImage? in
-                    return UIImage(data: data)
-                }.flatMap { (image: UIImage?) -> UIImage in
-                    guard let image = image else {
-                        // In case the image couldn't be loaded we show a image placeholder
-                        return UIImage(named: "no-image")!
+            guard let url = URL(string: strUrl),
+                let data = try? Data(contentsOf: url),
+                let image = UIImage(data: data) else {
+                    DispatchQueue.main.async {
+                        activityIndicator.stopAnimating()
+                        activityIndicator.removeFromSuperview()
+                        self.image = UIImage(named: "no-image")!
                     }
-                    return image
-                }
+                    return
+            }
             
             // Now we can update UI with the image, and disable de activity indicator
             DispatchQueue.main.async {

@@ -44,5 +44,7 @@ class DetailViewController: UIViewController {
         
         // Other configuration
         self.title = "\(self.place.city) - \(self.place.district)"
+        
+        print(self.place)
     }
 }

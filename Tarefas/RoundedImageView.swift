@@ -13,6 +13,7 @@ class RoundedImageView: UIImageView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
+        self.clipsToBounds = true
         self.layer.cornerRadius = self.frame.width < self.frame.height ? self.frame.width/2 : self.frame.height/2
     }
 

@@ -18,6 +18,9 @@
 		373454FB1E08989900D3354A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 373454F91E08989900D3354A /* Main.storyboard */; };
 		373454FD1E08989900D3354A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373454FC1E08989900D3354A /* Assets.xcassets */; };
 		373455001E08989900D3354A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 373454FE1E08989900D3354A /* LaunchScreen.storyboard */; };
+		373EB9181E0A91CD00D14A15 /* ActionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373EB9171E0A91CD00D14A15 /* ActionTableViewCell.swift */; };
+		373EB91A1E0A922A00D14A15 /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373EB9191E0A922A00D14A15 /* DescriptionTableViewCell.swift */; };
+		373EB91C1E0A926F00D14A15 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373EB91B1E0A926F00D14A15 /* CommentTableViewCell.swift */; };
 		37947ACB1E0A21A100F8BB33 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37947ACA1E0A21A100F8BB33 /* RoundedImageView.swift */; };
 		37947ACD1E0A398000F8BB33 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37947ACC1E0A397F00F8BB33 /* MapKit.framework */; };
 		37FBA44E1E089FF500129A41 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FBA44D1E089FF500129A41 /* Alamofire.framework */; };
@@ -45,6 +48,9 @@
 		373454FC1E08989900D3354A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		373454FF1E08989900D3354A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		373455011E08989900D3354A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		373EB9171E0A91CD00D14A15 /* ActionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionTableViewCell.swift; sourceTree = "<group>"; };
+		373EB9191E0A922A00D14A15 /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		373EB91B1E0A926F00D14A15 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		37947ACA1E0A21A100F8BB33 /* RoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		37947ACC1E0A397F00F8BB33 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		37FBA44D1E089FF500129A41 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -112,8 +118,11 @@
 		373455081E0898E300D3354A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				373EB9171E0A91CD00D14A15 /* ActionTableViewCell.swift */,
 				373454F51E08989900D3354A /* AppDelegate.swift */,
 				37FBA4651E08CDDF00129A41 /* Comment.swift */,
+				373EB91B1E0A926F00D14A15 /* CommentTableViewCell.swift */,
+				373EB9191E0A922A00D14A15 /* DescriptionTableViewCell.swift */,
 				372F77231E09FDF600BD650D /* DetailHeaderView.swift */,
 				37FBA4631E08CA8100129A41 /* Place.swift */,
 				37FBA4541E08A40500129A41 /* PlaceTableViewCell.swift */,
@@ -279,8 +288,11 @@
 				372F77201E09EAF000BD650D /* DetailViewController+UITableViewDataSource.swift in Sources */,
 				372F771C1E09DB3900BD650D /* RequestManager.swift in Sources */,
 				37FBA4501E08A22800129A41 /* PlacesViewController+UITableViewDelegate.swift in Sources */,
+				373EB9181E0A91CD00D14A15 /* ActionTableViewCell.swift in Sources */,
 				37FBA4641E08CA8100129A41 /* Place.swift in Sources */,
 				37FBA4601E08C0C900129A41 /* DetailViewController.swift in Sources */,
+				373EB91C1E0A926F00D14A15 /* CommentTableViewCell.swift in Sources */,
+				373EB91A1E0A922A00D14A15 /* DescriptionTableViewCell.swift in Sources */,
 				372F77241E09FDF600BD650D /* DetailHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
