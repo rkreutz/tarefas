@@ -24,6 +24,7 @@ class DetailViewController: UIViewController {
     /********************************/
     var place: Place!
     var headerSize: CGFloat = ProjectConfiguration.detailHeaderMaxHeight
+    var minHeight: CGFloat = 0
     
     /********************************/
     // MARK: - UIViewController functions
@@ -40,8 +41,6 @@ class DetailViewController: UIViewController {
         self.tableView.dataSource = self
         let headerViewNib = UINib(nibName: "DetailHeaderView", bundle: nil)
         tableView.register(headerViewNib, forHeaderFooterViewReuseIdentifier: DetailHeaderView.headerIdentifier)
-        self.tableView.rowHeight = UITableViewAutomaticDimension
-        self.tableView.estimatedRowHeight = 64
         
         // Configuring the right button of the navigation bar
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: nil, action: nil)
@@ -86,5 +85,15 @@ class DetailViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.navigationItem.titleView = titleView
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        // Here we discovery the minimal height the header needs to fill the whole table view
+        let labelHeight = (self.tableView.headerView(forSection: 0) as! DetailHeaderView).titleLabel.frame.height
+        let actualContenHeight = self.tableView.contentSize.height - self.headerSize
+        var missingSpace = self.tableView.frame.height - labelHeight - actualContenHeight
+        missingSpace = missingSpace > 0 ? missingSpace : 0
+        
+        self.minHeight = labelHeight + missingSpace
     }
 }
